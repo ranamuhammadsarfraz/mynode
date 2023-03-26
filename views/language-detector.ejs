@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/language-detector.css"/>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Language Detector</title>
+</head>
+<body>
+<form action="" id="mainDiv">
+<h1>Text Language Detector.</h1>
+<input type="text" placeholder="Enter a word *" required />
+<button style="cursor:pointer">Send Request</button>
+<h2></h2>
+<div id="innerAttribution"></div>
+</form>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.min.js" integrity="sha512-NCiXRSV460cHD9ClGDrTbTaw0muWUBf/zB/yLzJavRsPNUl9ODkUVmUHsZtKu17XknhsGlmyVoJxLg/ZQQEeGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    let innerDiv = document.querySelector('#innerDiv'),
+    loader = ()=>{
+        innerAttribution.innerText="API data is fetched from API NINJA."
+    Input.value="";   
+    },
+    Form = document.getElementById('mainDiv'),
+    Input = document.querySelector('input'),
+    H2 = document.querySelector('h2');
+    window.addEventListener("load",loader);
+
+
+    Form.addEventListener('submit', async (k)=>{
+k.preventDefault();
+
+try {
+    H2.innerText = "wait..."
+    let sendRequestToBackened = await axios.post('/language-detector',{lang:Input.value});
+H2.innerText = sendRequestToBackened.data.language;
+setTimeout(()=>  Input.value="",2000)
+} catch (error) {
+    alert("Error!")
+}
+
+    });
+
+
+</script>
+</html>
+
+<!-- <div>API by API-NINJA</div> -->

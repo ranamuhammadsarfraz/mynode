@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/currency-converter.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div id="mainDiv">
+        <h1>Currency Converter</h1>
+        <form id="innerDiv">
+            <input id="currencyCode" type="text" placeholder="Currency Code. Example: PKR" required>
+            <input id="currencyValue" type="number" type="text" placeholder="Currency Value *" required>
+            <input id="returnCurrency" type="text" type="text" placeholder="In what Currency? Example: USD" required>
+            <button id="btn">Know it</button>
+        </form>
+        <br/>
+        <h2 id="value"></h2>
+        <div>
+        <input style="padding:10px;border-radius:10px;outline:0;border:solid white 1px;opacity:.7" type="text" value="By Rana Sarfraz" disabled=true>
+        <input style="display:none" type="text" value="API Credit API-NINJA" disabled=true>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.min.js" integrity="sha512-NCiXRSV460cHD9ClGDrTbTaw0muWUBf/zB/yLzJavRsPNUl9ODkUVmUHsZtKu17XknhsGlmyVoJxLg/ZQQEeGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+let Form = document.getElementById("innerDiv"),
+currencyCode = document.getElementById("currencyCode"),
+currencyValue = document.getElementById("currencyValue"),
+returnCurrency = document.getElementById("returnCurrency"),
+btn = document.getElementById("btn"),
+value = document.getElementById("value"),
+c = console.log;
+
+Form.addEventListener('submit',(k)=>{
+k.preventDefault();
+
+(async ()=>{
+    let dataSendIt = await axios.post("/currency-converter",{Want:currencyCode.value,Have:returnCurrency.value,Amount:currencyValue.value});
+        currencyCode.value="";
+        currencyValue.value="";
+        returnCurrency.value="";
+        (!dataSendIt.data.new_amount)?alert("Internet or APIs Issue."):(value.innerHTML = dataSendIt.data.new_amount + " " + dataSendIt.data.new_currency);
+})();
+
+});
+
+window.addEventListener("load",function(){
+    currencyCode.value="";
+    currencyValue.value="";
+    returnCurrency.value="";
+});
+</script>
+</html>

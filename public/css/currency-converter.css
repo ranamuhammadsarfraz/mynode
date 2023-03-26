@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+}
+
+#mainDiv{
+    padding: 10px;
+    width:100%;
+    height:100vh;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
+}
+
+#mainDiv, h1{
+color: aliceblue;
+}
+
+input{
+    width:222px;
+}
+
+input, button{
+    padding:10px;
+    display: flex;
+    gap:22px;
+    background-color: black;
+    color:white;
+}
+button{
+    background-color: green;
+    cursor: pointer;
+}
+/* CSS attribution link: https://cssgradient.io/ */

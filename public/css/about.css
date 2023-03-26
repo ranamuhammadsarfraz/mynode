@@ -1,0 +1,101 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+body{
+	background-image: url('/image/pexels-hamza-gulzar-4084310.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 90vh;
+	width:  100%;
+	animation: linear 3s sdsv infinite;
+}
+@keyframes sdsv{
+	0%{
+		background-color: black;
+		opacity: 0;
+	}
+	10%{
+		opacity: .1;
+		background-color: white;
+	}
+	20%{
+		background-color: black;
+		opacity: .2;
+	}
+	30%{
+		opacity: .3;
+		background-color: white;
+	}
+	40%{
+		background-color: black;
+		opacity: .4;
+	}
+	50%{
+		opacity: .5;
+		background-color: white;
+	}
+	60%{
+		background-color: black;
+		opacity: .7;
+	}
+	70%{
+		opacity: .8;
+		background-color: white;
+	}
+	80%{
+		background-color: black;
+		opacity: .9;
+	}
+	90%{
+		opacity: 1;
+		background-color: white;
+	}
+	100%{
+		background-color: black;
+		opacity: 0;
+	}
+}
+#mainDiv{
+	background-image: url("/image/pexels-realtoughcandycom-11035380.jpg");
+	width: 99%;
+	padding: 10px;
+	height: 90vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin-top: 50px;
+}
+
+#innerDiv{
+	color: silver;
+	width: 60%;
+}
+#aboutLink{
+	text-decoration: none;
+	position: absolute;
+	bottom: 15px;
+	left: 3px;
+	font-size: 10pt;
+	color: silver;
+}
+abbr{
+	text-decoration: none;
+}
+#projectDiv{
+	position: relative;
+	padding: 30px;
+	width: 70%;
+	color: white;
+	background-color: silver;
+}
+@media only screen and (max-width:900px){
+	#projectDiv{
+		width: 100%;
+	}
+}

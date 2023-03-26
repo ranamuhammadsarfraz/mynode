@@ -1,0 +1,38 @@
+:root {
+    --padding: 10px;
+    --radius :22px
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#mainDiv{
+    width:100%;
+    height:100vh;
+    background-color:burlywood;
+    padding: var(--padding);
+}
+
+#mainDiv > input{
+outline: 0;
+padding: var(--padding);
+width:250px;
+outline: 0;
+border-radius: var(--radius);
+}
+
+#mainDiv > button{
+padding: var(--padding);
+color:white;
+background-color:navy;
+width:150px;
+font-size: 10pt;
+border-radius: var(--radius);
+}
+
+#innerDiv{
+margin-top: 10px;
+}

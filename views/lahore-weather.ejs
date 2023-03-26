@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/weather.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="mainDiv">  
+        <form class="formToSend">
+            <input id="inputform" type="text" placeholder="search" name="city" required="true"/>
+            <button id="btnForm">Search</button>
+        </form>
+        <div class="firstDiv">
+            <h1>Weather App.</h1>
+            <br/>
+            <br />
+            <h2 class="hTwo temp"><%=temperature%></h2>
+            <h3 class="cityClass"><%=city%></h3>
+        </div>
+        <div class="secondDiv">
+            <h4>Weather Details</h4>
+            <br/>
+            <ul>
+                <li class="cloudy">Cloudy <%=cloudy%></li>
+                <li class="humidity">Humidity <%=humidity%></li>
+                <li class="temp">Temperature <%=temperature%></li>
+                <li class="wind">Wind <%=wind%></li>
+            </ul>
+        </div>
+        <p class="paraDivFooter">By Rana Sarfraz ⚡</p>
+        <br/>
+        <p class="paraDivFooter" style="margin:20px">Developed In Lahore</p>
+        <br/>
+        <hr/>
+        <a href="ttp://api.openweathermap.org" class="paraDivFooter" style="margin:60px; color:silver; text-decoration: none;"><abbr style="text-decoration: none;" title="Open Weather APIs">Sources: Open Weather</abbr></a>
+    </div>
+</body>
+<script src="/js/weather.js"></script>
+</html>

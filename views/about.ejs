@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="/css/about.css">
+<title>About</title>
+</head>
+<body>
+<div id="mainDiv">
+</br></br></br>
+<div id="innerDiv">
+<h1>About page</h1>
+</br>
+<p>Hi, my name is Rana Sarfraz and I am a Developer who can code and can be available for your service. You can check my few projects below, many more are pending or are coming soon...</p>
+</br>
+<p>Photo attribution: pexels/pixabay...</p>
+</br>
+<h2>Project</h2>
+</br>
+<div id="projectDiv">
+<ol id="projectOrederList">
+</ol>
+</div>
+</div>
+<a href="visitheart.com" style="display:none">Developed by Rana Sarfraz</a>
+<a id="aboutLink" href="visitheart.com"><abbr title="Developed in Lahore">Developed by Rana Sarfraz with ❤️</abbr></a>
+</div>
+</body>
+<script>
+	const listArray = ["/","/cat-intro", "/jokes", "/lahore-weather", "/quotes", "/whois", "/about","https://visitheart.com"];
+const ProjectDiv = document.getElementById('projectDiv');
+const ProjectOrderedList = document.getElementById('projectOrederList');
+listArray.map((data, key, next)=>{
+	let list = document.createElement("li");
+	let href = document.createElement("a");
+	href.innerText=data;
+	href.key=key;
+	href.href=data;
+	href.style.background="silver";
+	list.appendChild(href);
+	ProjectOrderedList.appendChild(list);
+});
+</script>
+</html>
