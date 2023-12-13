@@ -1,0 +1,93 @@
+<style>
+    .compoenentTwo {
+        display: flex;
+        padding: 100px 150px 100px 150px;
+        gap: 50px;
+
+    }
+
+    .border1 {
+        width: 22px;
+        height: 5px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .compoenentTwoSpan {
+        padding: 20px 10px 20px 10px;
+        flex: 2;
+        display: grid;
+        gap: 22px;
+    }
+
+    @media only screen and (max-width:768px) {
+        .compoenentTwo {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .compoenentTwoSpan {
+            /* width: 400px; */
+            width: calc(100% - 100px);
+        }
+    }
+</style>
+
+<div class="compoenentTwo">
+
+    <span style="flex:1;font-size: 50px;">
+        <p><span style="color:red;">E</span>xcitement</p>
+    </span>
+
+    <span class="compoenentTwoSpan">
+        <div style="display: flex;gap:22px;">
+            <div class="border1"></div>
+            <div style="width:70px;" class="border1"></div>
+        </div>
+
+        <div style="display: grid;gap:11px;">
+            <h2>London Inc: Play ground</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium animi ab magni cum<br /> consectetur laudantium at corporis! Eum, nemo quasi aliquam exercitationem officia
+                <br /> veniam
+                fuga.
+                Aspernatur similique reiciendis ex maiores.
+            </p>
+        </div>
+        <hr />
+        <div style="display: flex;gap:22px;">
+            <div class="border1"></div>
+            <div style="width:70px;" class="border1"></div>
+        </div>
+
+        <div style="display: grid;gap:11px;">
+            <h2>London Inc: Play ground</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium animi ab magni cum<br /> consectetur laudantium at corporis! Eum, nemo quasi aliquam exercitationem officia
+                <br /> veniam
+                fuga.
+                Aspernatur similique reiciendis ex maiores.
+            </p>
+        </div>
+        <hr />
+        <div style="display: grid;gap:11px;">
+            <h2>User cheif creative officer</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium animi ab magni cum<br /> consectetur laudantium at corporis! Eum, nemo quasi aliquam exercitationem officia
+                <br /> veniam
+                fuga.
+                Aspernatur similique reiciendis ex maiores.
+            </p>
+        </div>
+        <hr />
+        <div style="display: grid;gap:11px;">
+            <h2>Apple Inc, Designer</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium animi ab magni cum<br /> consectetur laudantium at corporis! Eum, nemo quasi aliquam exercitationem officia
+                <br /> veniam
+                fuga.
+                Aspernatur similique reiciendis ex maiores.
+            </p>
+        </div>
+    </span>
+</div>

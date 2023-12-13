@@ -1,0 +1,64 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+nav {
+    padding: 11px 30px 11px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button {
+    padding: 3px 11px 3px 11px;
+    cursor: pointer;
+}
+
+#formSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 22px 11px 22px;
+}
+
+#formSection form input {
+    outline: 0;
+    padding: 3px;
+    border: none;
+}
+
+#formSection form button {
+    padding: 3px;
+    width: 101px;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+}
+
+#formSection select {
+    padding: 5px;
+}
+
+.singleComponent {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    display: grid;
+    place-items: center;
+    padding: 22px;
+}
+
+.icon {
+    font-size: 101px;
+}
+
+#dataSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,34 @@
+<style>
+    #componentOne {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 44px 44px 200px 44px;
+        color: white;
+        flex-wrap: wrap;
+        background-image: url("/image/plane-7236193_640.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    @media only screen and (max-width:868px) {
+        #componentOne {
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+</style>
+
+<div id="componentOne">
+    <span style="flex:1;font-size:66px;">
+        Find the <br />best <span style="color:rgba(255, 0, 0, 0.678)">talent</span>
+    </span>
+
+    <span style="flex:1;display: grid;gap:22px;">
+        <div style="width:50px; height:3px;background:white;"></div>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum error quibusdam nobis veniam. Officiis ducimus quia doloribus officia, illum cupiditate id deleniti nulla corporis earum,
+            velit tenetur et cum aliquid!</div>
+    </span>
+</div>

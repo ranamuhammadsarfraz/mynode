@@ -1,0 +1,44 @@
+<style>
+    .cF_ {
+        display: flex;
+        padding: 100px 150px 100px 150px;
+        gap: 50px;
+
+    }
+
+    .cN_ {
+        padding: 20px 10px 20px 10px;
+        flex: 2;
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+    }
+
+    @media only screen and (max-width:768px) {
+        .cF_ {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .cN_ {
+            width: calc(100% - 100px);
+        }
+    }
+</style>
+
+<div class="cF_">
+
+    <span style="flex:1;font-size: 50px;">
+        <p>Gallery</p>
+    </span>
+
+    <span class="cN_">
+        <img width="200px" height="200px" src="https://cdn.pixabay.com/photo/2023/08/06/18/16/trees-8173531_640.jpg" alt="">
+
+        <img width="200px" height="200px" src="https://cdn.pixabay.com/photo/2023/06/14/02/21/stairs-8062145_640.jpg" alt="">
+
+        <img width="200px" height="200px" src="https://cdn.pixabay.com/photo/2023/08/06/18/16/trees-8173531_640.jpg" alt="">
+
+        <img width="200px" height="200px" src="https://cdn.pixabay.com/photo/2023/03/06/14/27/rain-7833614_640.jpg" alt="">
+    </span>
+</div>

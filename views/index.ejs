@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <style>
-        *{
+        * {
             padding: 0px;
             margin: 0px;
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
         }
-        div{
-            width:100%;
-            height:100vh;
+
+        div {
+            width: 100%;
+            height: 100vh;
             overflow: hidden;
-            background:url("/image/graham-holtshausen-fUnfEz3VLv4-unsplash.jpg");
+            background: url("/image/graham-holtshausen-fUnfEz3VLv4-unsplash.jpg");
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            color:white;
+            color: white;
         }
-        #ejkfbqeigfeqgicscgjqkguv{
+
+        #ejkfbqeigfeqgicscgjqkguv {
             position: absolute;
             text-decoration: none;
             font-size: 7pt;
             padding: 10px;
-            background: white;
-            color:black;
+            background: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             right: 6px;
             animation: linear homeAnimation 3s forwards;
         }
-         @keyframes homeAnimation{
-            0%{
-            top: -1000px;
-            opacity: 0;
+
+        @keyframes homeAnimation {
+            0% {
+                top: -1000px;
+                opacity: 0;
             }
-            50%{
-            opacity: .5;
-            top: -500px;
+
+            50% {
+                opacity: .5;
+                top: -500px;
             }
-            100%{
-            opacity: 1;
-            bottom:0px;
+
+            100% {
+                opacity: 1;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
             }
         }
-        abbr, a{
+
+        abbr,
+        a {
             text-decoration: none;
         }
     </style>
+    <link rel="stylesheet" href="/css/about.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -59,23 +73,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
 </head>
+
 <body>
     <div>
         <h1>Hello, my name is Sarfraz.</h1>
-                     <a style="color:white" href="/about">Project</a>
-        <div id="item"></div>
+        <a style="color:white" href="/nodejs/projects">Projects</a>
+        </br>
+        <div id="projectDiv">
+            <ul id="projectOrederList">
+            </ul>
+        </div>
+
         <a id="ejkfbqeigfeqgicscgjqkguv" style="
-         overflow: none;
-            fontSize:5pt;
-            textDecoration:none;
-             " href="visitheart.com"><abbr title="Developed in Lahore ⚡">Developed by Rana Sarfraz</abbr></a>
+        overflow: none;
+           fontSize:5pt;
+           textDecoration:none;
+            " href="https://rmsencode.com"><abbr title="Developed in Lahore ⚡">Developed by Rana Sarfraz</abbr></a>
     </div>
 </body>
 <script>
-const Item = document.getElementById("item");
-Item.style.display="flex";
-Item.style.flexDirection = 'column'
-Item.style.gap="5px"
-Item.innerHTML='<a style="color: white" href="/about">About me</a> Photo by <a style="color:silver" href="https://unsplash.com/@freedomstudios?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Graham Holtshausen</a> on <a style="color:silver;"href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash ⚡</a>'
-    </script>
+    const listArray = ["/", "/cat-intro", "/jokes", "/lahore-weather", "/quotes", "/whois", "/counter", "/bulb", "/chuck-norris", "/currency-converter", "/language-detector", "/loader", "/my-steem", "/simple1", "/air-quality-index", "https://rmsencode.com/about", "https://rmsencode.com"];
+
+    const ProjectDiv = document.getElementById('projectDiv');
+    const ProjectOrderedList = document.getElementById('projectOrederList');
+    ProjectOrderedList.style.display = "grid"
+    ProjectOrderedList.style.gap = "22px"
+    listArray.map((data, key, next) => {
+        let list = document.createElement("li");
+        let href = document.createElement("a");
+        href.innerText = data;
+        href.key = key;
+        href.href = data;
+        href.style.background = "black";
+        href.style.padding = "11px";
+        href.style.color = "white";
+        list.appendChild(href);
+        ProjectOrderedList.appendChild(list);
+    });
+</script>
+
 </html>

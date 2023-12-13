@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        main {
+            width: 100%;
+            background-color: #333;
+            height: 100vh;
+            color: aliceblue;
+            display: grid;
+            place-content: center;
+        }
+
+        section {
+            width: 90%;
+            background-color: rgb(41, 41, 41);
+            text-align: center;
+            height: 500px;
+            display: grid;
+            padding: 22px;
+            margin: auto;
+        }
+
+        #aqi_value {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            color: rgb(41, 42, 43);
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+        }
+
+        #main_data {
+            display: grid;
+            gap: 11px;
+        }
+
+        #main_data p {
+            font-size: 11px;
+        }
+
+        form input {
+            padding: 3px;
+            outline: 0;
+        }
+
+        form button {
+            cursor: pointer;
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 5px;
+        }
+
+        form button:active {
+            opacity: .5;
+        }
+
+        a {
+            text-decoration: none;
+            color: silver;
+            opacity: .5;
+            font-size: 9px;
+            text-align: center;
+        }
+
+
+        @media only screen and (max-width:768px) {
+            main {
+                height: 1000px;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Air Quality Index</h1>
+            <div id="city_name">Loading</div>
+            <div id="main_data">
+                <div id="aqi_value"><span>AQI Value:</span> <span id="aqi">Loading</span>
+                </div>
+                <p>Normal Air Quality Index is less then 100 above is unhealthy
+                </p>
+            </div>
+            <form id="form">
+                <input id="input_form" placeholder="City *" required type="text">
+                <button id="btn">search</button>
+            </form>
+
+        </section>
+        <br>
+        <a href="https://rmsencode.com">Developed by R.M.Sarfraz</a>
+    </main>
+</body>
+<script type="module">
+    const city_name = document.getElementById("city_name")
+    const aqi = document.getElementById("aqi")
+    const input_form = document.getElementById("input_form")
+    const btn = document.getElementById("btn")
+    const form = document.getElementById("form")
+    import hello from "/hello.json" assert { type: 'json' };
+    let city = hello[0].city;
+
+    fetch(hello[0].air_index + city, {
+        method: 'GET',
+        headers: {
+            'X-Api-Key': hello[0].chgvjb
+        },
+    })
+        .then(response => response.json())
+        .then(response => {
+            aqi.innerText = response.overall_aqi
+            city_name.innerText = city.toUpperCase()
+
+        })
+        .catch(err => console.error(err));
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+        city = input_form.value
+        fetch(hello[0].air_index + city, {
+            method: 'GET',
+            headers: {
+                'X-Api-Key': hello[0].chgvjb
+            },
+        })
+            .then(response => response.json())
+            .then(response => {
+                if (response.error == "Could not find city.") {
+                    aqi.innerText = "No Data"
+                    city_name.innerText = "Check spelling or City doesn't exist, back to default in 2s"
+                    setTimeout(() => {
+                        city = hello[0].city;
+                        fetch(hello[0].air_index + city, {
+                            method: 'GET',
+                            headers: {
+                                'X-Api-Key': hello[0].chgvjb
+                            },
+                        })
+                            .then(response => response.json())
+                            .then(response => {
+                                aqi.innerText = response.overall_aqi
+                                city_name.innerText = city.toUpperCase()
+                                input_form.value = ""
+                            })
+                            .catch(err => console.error(err));
+                    }, 2000)
+                }
+                else {
+                    aqi.innerText = response.overall_aqi
+                    city_name.innerText = city.toUpperCase()
+                    input_form.value = ""
+                }
+            })
+            .catch(err => {
+                console.log(err)
+            });
+    })
+
+</script>
+
+</html>

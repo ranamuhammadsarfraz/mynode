@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            color: white;
+            background: rgb(23, 24, 24);
+        }
+    </style>
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="stylesheet" href="/css/my-steem.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple-1</title>
+</head>
+
+<body>
+    <%- include('simple1/componentOne') %>
+        <%- include('simple1/componentTwo') %>
+            <%- include('simple1/componentThree') %>
+                <%- include('simple1/componentFour') %>
+                    <%- include('simple1/componentsFive') %>
+</body>
+
+</html>

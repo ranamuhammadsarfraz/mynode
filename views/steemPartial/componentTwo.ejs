@@ -1,0 +1,66 @@
+<style>
+    #componentTwo {
+        padding: 100px 44px 200px 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.623);
+    }
+
+
+
+    @media only screen and (max-width:768px) {
+        #componentTwo {
+            flex-direction: column;
+        }
+
+        .imgDiv {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
+
+<div id="componentTwo">
+    <span style="flex:1;display: grid; gap:22px;">
+        <div style="width:50px; height:3px;background:pink;"></div>
+        <div style="font-size:50px;">
+            Build & manage <br /> distributed teams <br /> like no one else.
+        </div>
+    </span>
+
+    <span style="flex:1; display: grid;gap:22px;">
+        <div class="imgDiv" style="display: flex;
+        align-items: center;
+        justify-content: center;gap:15px;">
+            <div style="width:50px;height:50px;background-image:url(/image/superhero-534120_640.jpg)"></div>
+            <div style="display: grid; gap:7px;">
+                <strong style="color:pink;">Experimental individual</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="imgDiv" style="display: flex;
+        align-items: center;
+        justify-content: center;gap:15px;">
+            <div style="width:50px;height:50px;background-image:url(/image/superhero-534120_640.jpg)"></div>
+            <div style="display: grid; gap:7px;">
+                <strong style="color:pink;">Experimental individual</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+
+        <div class="imgDiv" style="display: flex;
+        align-items: center;
+        justify-content: center;gap:15px;">
+            <div style="width:50px;height:50px;background-image:url(/image/superhero-534120_640.jpg)"></div>
+            <div style="display: grid; gap:7px;">
+                <strong style="color:pink;">Experimental individual</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </span>
+</div>

@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "start": "node app.js"
+    "start": "node app.js",
+    "lint": "next lint"
   },
   "main": "app.js",
   "keywords": [],

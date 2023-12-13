@@ -1,0 +1,55 @@
+<style>
+    .cT {
+        display: flex;
+        padding: 100px 150px 100px 150px;
+        gap: 50px;
+        background-color: rgba(0, 0, 0, 0.582);
+    }
+
+    .b1 {
+        width: 22px;
+        height: 5px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .cN {
+        padding: 20px 10px 20px 10px;
+        flex: 2;
+        display: grid;
+        gap: 22px;
+    }
+
+    @media only screen and (max-width:768px) {
+        .cT {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .cN {
+            /* width: 400px; */
+            width: calc(100% - 100px);
+        }
+    }
+</style>
+
+<div class="cT">
+
+    <span style="flex:1;font-size: 50px;">
+        <p>Afflitxyte</p>
+    </span>
+
+    <span class="cN">
+        <div style="display: flex;gap:22px;">
+            <div class="b1"></div>
+            <div style="width:70px;" class="b1"></div>
+        </div>
+
+        <div style="display: grid;gap:11px;">
+            <h2>Metaphorism xyz</h2>
+            <p>
+                Aspernatur similique reiciendis ex maiores.
+            </p>
+        </div>
+    </span>
+</div>

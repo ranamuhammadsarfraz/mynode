@@ -1,39 +1,43 @@
-*{
+* {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 
-#loader{
-	width:100%;
-	height:100vh;
+#loader {
+	width: 100%;
+	height: 100vh;
 	background-color: black;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.div{
-	width:100px;
-	height:100px;
+.div {
+	width: 29px;
+	height: 29px;
 	border-radius: 50%;
-	border:solid white 10px;
 	animation: linear gv 2s infinite;
+	transform: rotate(25deg);
 }
 
-#baton{
-	width:17px;
-	height:100px;
-	transform: rotate(45deg);
+#baton {
+	width: 17px;
+	height: 70px;
+	transform: rotate(20deg);
 	position: relative;
 	z-index: 50000;
-	left:47px;
-	bottom:20px;
-	background-color: black;
+	left: 15px;
+	bottom: 60px;
+	background-color: rgb(0, 0, 0);
 }
 
-@keyframes gv{
-	to{
-		transform: rotate(1turn);
+@keyframes gv {
+	0% {
+		border: solid white 10px;
+	}
+
+	100% {
+		border: solid rgb(0, 0, 0) 10px;
 	}
 }
