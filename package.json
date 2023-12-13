@@ -2,13 +2,14 @@
   "name": "weatherapp",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node app.js",
+    "start": "node index.js",
     "lint": "next lint"
   },
-  "main": "app.js",
+  "main": "index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",

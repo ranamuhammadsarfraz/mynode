@@ -1,9 +1,9 @@
-const express = require("express"),
-  app = express(),
-  axios = require("axios"),
+import express from "express";
+import axios from "axios"
+import request from "postman-request";
+import dotenv from "dotenv"
+const app = express(),
   Path = process.env.PORT || 3000,
-  request = require("postman-request"),
-  postmanRequest = require("postman-request"),
   sddigf = () => console.log(`App is listening at ${Path}`),
   setArrayData = [
     {
@@ -62,7 +62,7 @@ const express = require("express"),
 app.use(express.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
-require("dotenv").config();
+dotenv.config();
 
 setArrayData.map((data) => {
   app.get(data.link, (req, res) => res.status(200).render(data.file));
