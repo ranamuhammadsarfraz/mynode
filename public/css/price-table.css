@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(16, 2, 26);
+    color: white;
+}
+
+#main_component {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding-top: 8.2vh;
+    padding-bottom: 8.2vh;
+}
+
+#inner_component {
+    display: grid;
+    gap: 22px;
+}
+
+#plan_component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    flex-wrap: wrap;
+}
+
+.yearly {
+    font-weight: bolder;
+}
+
+.save {
+    background-color: rgb(11, 6, 54);
+    border-radius: 9px;
+    font-size: 12px;
+    position: relative;
+    bottom: 43px;
+    width: max-content;
+    margin: auto;
+    padding: 3px 13px 3px 13px;
+}
+
+.price_table {
+    background-color: rgb(11, 6, 54);
+    display: grid;
+    gap: 29px;
+    border: solid 1px rgb(51, 51, 51);
+    padding: 30px 46px 40px 46px;
+    border-radius: 9px;
+}
+
+#what_inside_plan {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#tickmark_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 23px;
+    flex-wrap: wrap;
+    padding: 0vw 30vw 0vw 30vw;
+}
+
+button {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:968px) {
+    #tickmark_div {
+        padding: 0vw 10vw 0vw 10vw;
+    }
+}

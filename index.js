@@ -2,63 +2,11 @@ import express from "express";
 import axios from "axios"
 import request from "postman-request";
 import dotenv from "dotenv"
+import setArrayData from "./router/routeHref.js"
 const app = express(),
-  Path = process.env.PORT || 3000,
-  sddigf = () => console.log(`App is listening at ${Path}`),
-  setArrayData = [
-    {
-      link: "/",
-      file: "index.ejs",
-    },
-    {
-      link: "/whois",
-      file: "whois.ejs",
-    },
-    {
-      link: "/nodejs/projects",
-      file: "about.ejs",
-    },
-    {
-      link: "/currency-converter",
-      file: "currency-converter.ejs",
-    },
-    {
-      link: "/chuck-norris",
-      file: "chuck-norris.ejs",
-    },
-    {
-      link: "/language-detector",
-      file: "language-detector.ejs",
-    },
-    {
-      link: "/counter",
-      file: "counter.ejs",
-    },
-    {
-      link: "/bulb",
-      file: "bulb.ejs",
-    },
-    {
-      link: "/loader",
-      file: "loader.ejs",
-    },
-    {
-      link: "/currency-converter",
-      file: "currency-converter.ejs",
-    },
-    {
-      link: "/my-Steem",
-      file: "my-Steem.ejs",
-    },
-    {
-      link: "/simple1",
-      file: "simple1.ejs"
-    },
-    {
-      link: "/air-quality-index",
-      file: "air-quality-index.ejs"
-    }
-  ];
+  Path = process.env.PORT || 3002,
+  sddigf = () => console.log(`App is listening at ${Path}`)
+
 app.use(express.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -301,5 +249,5 @@ app.post("/language-detector", async (req, res) => {
 });
 
 app.get("/*", (req, res) => res.status(404).render("error.ejs"));
-app.post("/*", (req, res) => res.json("I Love NodeJs"));
+app.post("/*", (req, res) => res.json(""));
 app.listen(Path, () => console.log(`Backened is listening at ${Path}`));
