@@ -251,3 +251,6 @@ app.post("/language-detector", async (req, res) => {
 app.get("/*", (req, res) => res.status(404).render("error.ejs"));
 app.post("/*", (req, res) => res.json(""));
 app.listen(Path, () => console.log(`Backened is listening at ${Path}`));
+
+// Export the Express API
+module.exports = app;
